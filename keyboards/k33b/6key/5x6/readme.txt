@@ -1,5 +1,20 @@
-mailed source from k33b
+Source provided by the fantastic folks at k33b.com
 
-generated keymap.json:
-util/docker_cmd.sh qmk c2json -kb k33b/6key/5x6 -km vial keyboards/k33b/6key/5x6/keymaps/vial/keymap.c -o keyboards/k33b/6key/5x6/keymaps/vial/keymap.json
+Modify amc.json at https://config.qmk.fm
+
+Generate km.c
+```sh
+util/docker_cmd.sh qmk json2c amc_k33b/amc.json -o amc_k33b/km.c
+```
+
+Compile uf2
+```sh
+util/docker_build.sh k33b/6key/5x6:amc
+```
+
+Enter bootloader and flash
+```sh
+picotool load -v k33b_6key_5x6_amc.uf2
+picotool reboot
+```
 
