@@ -1,4 +1,4 @@
-Source provided by the fantastic folks at k33b.com
+Source provided by the fantastic folks at https://k33b.com
 
 Modify amc.json at https://config.qmk.fm
 
